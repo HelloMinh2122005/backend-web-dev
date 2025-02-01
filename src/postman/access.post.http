@@ -6,7 +6,7 @@ POST {{url_dev}}/v1/api/shop/signup
 Content-Type: application/json
 
 {
-  "name": "exampleUser",
-  "email": "example@example.com",
-  "password": "examplePassword"
+  "name": "exampleUserMINH22",
+  "email": "example@exampleMINH211.com",
+  "password": "examplePasswordMINH21"
 }
