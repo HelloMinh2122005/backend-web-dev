@@ -9,6 +9,10 @@ const compression = require('compression')
 app.use(morgan('dev'))
 app.use(helmet())
 app.use(compression())
+app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}))
 
 // Database
 require('./databases/init.mongodb')
@@ -16,9 +20,8 @@ const { checkOverLoad } = require('./helpers/count-connection')
 checkOverLoad()
 
 // Routes
-app.get('/', (req, res) => {
-    res.send('Hello World')
-})
+app.use('/', require('./routes/index'))
+
 // Error handlers
 
 
